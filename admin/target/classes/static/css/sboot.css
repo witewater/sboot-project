@@ -1,0 +1,9 @@
+body {
+	height: auto;
+	font-family: "Microsoft YaHei";
+	background-size:cover;
+	background-repeat:no-repeat;
+}
+html {
+    overflow: hidden;
+}

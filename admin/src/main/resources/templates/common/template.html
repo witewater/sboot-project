@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="header(title, link, style)">
+<th:block th:if="${title == null}">
+	<title>SBOOT DEMO</title>
+</th:block>
+<th:block th:if="${title != null}">
+	<title th:replace="${title}">title</title>
+</th:block>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+<!-- Tell the browser to be responsive to screen width -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta content="no-cache" http-equiv="Pragma" />
+<meta http-equiv="Expires" content="0" />
+<meta name="keywords" content="sboot" />
+<meta name="description" content="sboot" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" th:href="@{/favicon.ico}" type="image/x-icon">
+<!-- 引入css -->
+<!-- Bootstrap 3.3.7 -->
+<link rel="stylesheet" th:href="@{/lib/bootstrap/css/bootstrap.min.css}">
+<!-- Font Awesome -->
+<link rel="stylesheet" th:href="@{/plugins/adminlte-iframe/css/font-awesome.min.css}">
+<!-- Ionicons -->
+<link rel="stylesheet" th:href="@{/plugins/adminlte-iframe/css/ionicons.min.css}">
+<!-- Theme style -->
+<link rel="stylesheet" th:href="@{/plugins/adminlte-iframe/css/AdminLTE.min.css}">
+<!-- AdminLTE Skins.Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
+<link rel="stylesheet"  th:href="@{/plugins/adminlte-iframe/css/skins/all-skins.min.css}">
+<!-- iCheck -->
+<link rel="stylesheet" th:href="@{/plugins/iCheck/square/blue.css}">
+<!-- 单选复选 -->
+<link rel="stylesheet" th:href="@{/plugins/iCheck/all.css}">
+<!-- 加载效果 -->
+<!-- <link rel="stylesheet" th:href="@{/plugins/pace/pace.min.css}"> -->
+<!-- bootstrap table -->
+<link rel="stylesheet" th:href="@{/plugins/bootstrap-table/bootstrap-table.min.css}">
+<!-- 时间选择器 -->
+<link rel="stylesheet" th:href="@{/plugins/bootstrap-datepicker/dist/css/bootstrap-datepicker3.min.css}">
+<!-- bootstrap select  -->
+<link rel="stylesheet" th:href="@{/plugins/bootstrap-select/css/bootstrap-select.css}">
+<!-- bootstrap validator -->
+<link rel="stylesheet" th:href="@{/plugins/bootstrapvalidator/css/bootstrapValidator.min.css}">
+<!--easyUI 使用会出现冲突-->
+<!-- <link rel="stylesheet" th:href="@{/lib/jquery.easyui/1.5/themes/default/easyui.css}">
+<link rel="stylesheet" th:href="@{/lib/jquery.easyui/1.5/themes/icon.css}"> -->
+<!-- 自定义样式 -->
+<link rel="stylesheet" th:href="@{/css/sboot.css}" media="all">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<!-- Google Font -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
+<th:block th:if="${link != null}">
+	<th:block th:replace="${link}"></th:block>
+</th:block>
+<th:block th:if="${style != null}">
+	<th:block th:replace="${style}"></th:block>
+</th:block>
+
+</head>
+<body>
+	<th:block th:fragment="script">
+		<!-- jQuery 2.2.3 -->
+		 <script th:src="@{/lib/jquery/jquery-2.2.3.min.js}"></script>
+		<!-- jQuery 3 -->
+		<!-- <script th:src="@{/lib/jquery/jquery.min.js}" charset="utf-8"></script> -->
+		<!-- Bootstrap 3.3.7 -->
+		<script th:src="@{/lib/bootstrap/js/bootstrap.min.js}"></script>
+		<!-- SlimScroll -->
+		<script th:src="@{/plugins/jquery-slimscroll/jquery.slimscroll.min.js}"></script>
+		<!-- FastClick -->
+		<script th:src="@{/plugins/fastclick/lib/fastclick.js}"></script>
+		<!-- AdminLTE App -->
+		<script th:src="@{/plugins/adminlte-iframe/js/app.js}"></script>
+		<!-- AdminLTE for demo purposes -->
+		<script th:src="@{/plugins/adminlte-iframe/js/demo.js}"></script>
+		<!--tabs-->
+		<script th:src="@{/plugins/adminlte-iframe/js/app_iframe.js}"></script>
+		<!-- iCheck 单选复选框 -->
+		<script th:src="@{/plugins/iCheck/icheck.min.js}"></script>
+		<!-- 加载效果 -->
+	    <!-- <script th:src="@{/plugins/pace/pace.min.js}"></script> -->
+		<!-- bootstrap table -->
+		<script th:src="@{/plugins/bootstrap-table/bootstrap-table.min.js}"></script>
+		<script th:src="@{/plugins/bootstrap-table/bootstrap-table-zh-CN.min.js}"></script>
+		<!-- 下拉 -->
+		<script th:src="@{/plugins/bootstrap-select/js/bootstrap-select.js}"></script>
+		<script th:src="@{/plugins/bootstrap-select/js/i18n/defaults-zh_CN.min.js}"></script>
+		<!-- 校验 -->
+		<script th:src="@{/plugins/bootstrapvalidator/js/bootstrapValidator.min.js}"></script>
+		<script th:src="@{/plugins/bootstrapvalidator/js/language/zh_CN.js}"></script>
+		<!-- 时间选择器 -->
+		<script th:src="@{/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js}"></script>
+		<script th:src="@{/plugins/bootstrap-datepicker/js/bootstrap-datepicker.zh-CN.min.js}"></script>
+		<script th:src="@{/plugins/bootstrap-datepicker/js/bootstrap-datepicker.zh-CN.min.js}"></script>
+		<!--easyUI-->
+	    <!--  <script th:src="@{/lib/jquery.easyui/1.5/jquery.easyui.min.js}"></script> -->
+		<!-- jquery-file-upload  -->
+		<script th:src="@{/plugins/jquery-file-upload/js/vendor/jquery.ui.widget.js}"></script>
+		<script th:src="@{/plugins/jquery-file-upload/js/jquery.fileupload.js}"></script>
+		<script th:src="@{/plugins/jquery-file-upload/js/jquery.iframe-transport.js}"></script>
+		<!-- table拖拽 -->
+		<script th:src="@{/lib/drag/jquery.drag.min.js}"></script>
+		<!-- vue组件 -->
+	    <script th:src="@{/lib/vue-2.5.21/vue.min.js}"></script>
+		<!-- 背景图片插件 -->
+		<script th:src="@{/lib/jquery-backstretch/jquery.backstretch.min.js}"></script>
+		<!-- 弹出层 -->
+		<script th:src="@{/plugins/layer-v3.0.3/layer.js}"></script>
+		<!-- 模板工具 -->
+		<script th:src="@{/lib/jquery-tmpl/jquery.tmpl.min.js}"></script>
+		<!-- wayjs -->
+		<script th:src="@{/plugins/wayjs/way.js}"></script>
+		<!-- 项目全局配置 -->
+		<script th:src="@{/js/lib/sboot.js}"></script>
+		<!-- 不能重复引用 -->
+		<script th:src="@{/js/lib/sboot-util.js}"></script>
+	</th:block>
+</body>
+</html>

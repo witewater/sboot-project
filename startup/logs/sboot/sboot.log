@@ -1,0 +1,2 @@
+2019-05-07 17:01:55,187 INFO (StartupInfoLogger.java:50)- Starting EntryAppliaction on MyLj-PC with PID 9616 (D:\ideaproject\sboot\startup\target\classes started by MyLj in D:\ideaproject\sboot\startup)
+2019-05-07 17:01:55,206 INFO (SpringApplication.java:679)- The following profiles are active: dev

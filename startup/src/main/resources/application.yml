@@ -1,0 +1,37 @@
+### 服务器配置
+server:
+  port: 8080
+
+### spring配置
+spring:
+## 数据库配置
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/sboot?useSSL=false&characterEncoding=utf-8
+    username: root
+    password: 123456
+
+## jpa配置
+  jpa:
+    database: MYSQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate.dialect: org.hibernate.dialect.MySQL5Dialect
+      hibernate.format_sql: false
+
+## thymeleaf模板设置
+  thymeleaf:
+    prefix: classpath:/templates
+    suffix: .html
+    mode: HTML
+    encoding: utf-8
+    servlet.content-type: text/html
+    cache: false
+
+## 文件上传配置
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB

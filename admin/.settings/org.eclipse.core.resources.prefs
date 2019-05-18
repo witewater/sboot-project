@@ -1,0 +1,15 @@
+eclipse.preferences.version=1
+encoding//src/main/java=UTF-8
+encoding//src/main/resources=UTF-8
+encoding//src/main/resources/templates/index.html=UTF-8
+encoding//src/main/resources/templates/login.html=UTF-8
+encoding//src/main/resources/templates/system/dict/add.html=UTF-8
+encoding//src/main/resources/templates/system/dict/detail.html=UTF-8
+encoding//src/main/resources/templates/system/dict/index.html=UTF-8
+encoding//src/main/resources/templates/system/log/index.html=UTF-8
+encoding//src/main/resources/templates/system/main/userInfo.html=UTF-8
+encoding//src/main/resources/templates/system/menu/add.html=UTF-8
+encoding//src/main/resources/templates/system/menu/detail.html=UTF-8
+encoding//src/main/resources/templates/system/menu/index.html=UTF-8
+encoding//src/test/java=UTF-8
+encoding/<project>=UTF-8

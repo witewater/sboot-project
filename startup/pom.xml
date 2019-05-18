@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<parent>
+		<artifactId>sboot</artifactId>
+		<groupId>cn.wendong</groupId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+
+	<artifactId>startup</artifactId>
+	<packaging>jar</packaging>
+	<name>引导模块</name>
+	<description>用于项目启动和打包</description>
+
+
+	<dependencies>
+		<dependency>
+			<groupId>cn.wendong</groupId>
+			<artifactId>admin</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+	</dependencies>
+
+	<!-- Maven控制Spring Profile -->
+	<profiles>
+		<!-- 开发 默认激活 -->
+		<profile>
+			<id>dev</id>
+			<properties>
+				<!-- 环境标识，需要与配置文件的名称相对应 -->
+				<activatedProperties>dev</activatedProperties>
+			</properties>
+			<activation>
+				<!-- 默认环境 -->
+				<activeByDefault>true</activeByDefault>
+			</activation>
+		</profile>
+		<!-- 测试服务器 -->
+		<profile>
+			<id>test</id>
+			<properties>
+				<activatedProperties>test</activatedProperties>
+			</properties>
+		</profile>
+		<!-- 生产服务器 -->
+		<profile>
+			<id>prod</id>
+			<properties>
+				<activatedProperties>prod</activatedProperties>
+			</properties>
+		</profile>
+	</profiles>
+
+	<build>
+		<resources>
+			<!-- profile对资源的打包操作 -->
+			<resource>
+				<!--配置文件路径 -->
+				<directory>src/main/resources</directory> <!--这里对应项目存放配置文件的目录 -->
+				<!--开启filtering功能 -->
+				<filtering>true</filtering>
+			</resource>
+			<resource>
+				<filtering>true</filtering>
+				<directory>src/main/resources</directory>
+				<includes>
+					<include>application-${activatedProperties}*.properties</include>
+					<include>application.properties</include>
+				</includes>
+			</resource>
+		</resources>
+
+		<!-- <plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<mainClass>cn.wendong.EntryAppliaction</mainClass>springboot启动类目录
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							创建一个自动可执行的jar或war文件
+							<goal>repackage</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins> -->
+
+	</build>
+</project>

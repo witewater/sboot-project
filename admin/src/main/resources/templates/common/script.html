@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<th:block th:fragment="file">
+<script type="text/javascript" th:src="@{/plugins/jquery-file-upload/js/vendor/jquery.ui.widget.js}"></script>
+<script type="text/javascript" th:src="@{/plugins/jquery-file-upload/js/jquery.fileupload.js}"></script>
+<script type="text/javascript" th:src="@{/plugins/jquery-file-upload/js/jquery.iframe-transport.js}"></script>
+</th:block>
+
+<th:block th:fragment="tree">
+<link rel="stylesheet" th:href="@{/plugins/ztree/css/bootstrapStyle/bootstrapStyle.css}">
+<script type="text/javascript" th:src="@{/plugins/ztree/js/jquery.ztree.core.min.js}"></script>
+<script type="text/javascript" th:src="@{/plugins/ztree/js/jquery.ztree.excheck.min.js}"></script>
+</th:block>
+
+<th:block th:fragment="easyui">
+<!--easyUI-->
+<link rel="stylesheet" type="text/css" th:href="@{/lib/jquery.easyui/1.5/themes/default/easyui.css}">
+<link rel="stylesheet" type="text/css" th:href="@{/lib/jquery.easyui/1.5/themes/icon.css}">
+<script type="text/javascript" th:src="@{/lib/jquery.easyui/1.5/jquery.easyui.min.js}"></script>
+</th:block>

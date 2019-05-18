@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: 业务核心模块
+Implementation-Version: 1.0-SNAPSHOT
+Built-By: MyLj
+Implementation-Vendor-Id: cn.wendong
+Build-Jdk: 1.8.0_102
+Implementation-URL: http://www.example.com/core
+Created-By: Maven Integration for Eclipse
+

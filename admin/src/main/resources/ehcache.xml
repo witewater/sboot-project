@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://ehcache.org/ehcache.xsd">
+
+	<!-- 磁盘缓存位置 -->
+	<diskStore path="java.io.tmpdir" />
+
+	<!-- 默认缓存 -->
+	<defaultCache maxElementsInMemory="10000" eternal="false"
+		timeToIdleSeconds="120" timeToLiveSeconds="120" maxElementsOnDisk="10000000"
+		diskExpiryThreadIntervalSeconds="120" memoryStoreEvictionPolicy="LRU">
+		<persistence strategy="localTempSwap" />
+	</defaultCache>
+
+
+	<cache name="authorizationCache" maxElementsInMemory="1000"
+		eternal="false" timeToIdleSeconds="3600" timeToLiveSeconds="0"
+		overflowToDisk="false" statistics="true">
+	</cache>
+
+	<cache name="authenticationCache" maxElementsInMemory="1000"
+		eternal="false" timeToIdleSeconds="3600" timeToLiveSeconds="0"
+		overflowToDisk="false" statistics="true">
+	</cache>
+
+    <!-- 当前会话 -->
+	<cache name="shiro-activeSessionCache" maxElementsInMemory="10000"
+		eternal="false" timeToIdleSeconds="3600" timeToLiveSeconds="0"
+		overflowToDisk="false" statistics="true">
+	</cache>
+	
+	<!-- 现在登录次数 -->
+	<cache name="shiro-kickout-session" maxElementsInMemory="10000"
+		eternal="false" timeToIdleSeconds="3600" timeToLiveSeconds="0"
+		overflowToDisk="false" statistics="true">
+	</cache>
+	
+	<!-- 密码错误次数 -->
+	<cache name="passwordRetryCache" maxElementsInMemory="10000"
+		eternal="false" timeToIdleSeconds="3600" timeToLiveSeconds="0"
+		overflowToDisk="false" statistics="true">
+	</cache>
+
+	<!-- 字典元素缓存 -->
+	<cache name="dictionary" maxElementsInMemory="10000" eternal="true"
+		timeToIdleSeconds="120" timeToLiveSeconds="120" maxElementsOnDisk="10000000"
+		diskExpiryThreadIntervalSeconds="120" memoryStoreEvictionPolicy="LRU">
+	</cache>
+	
+	  <!-- 系统缓存 -->
+    <cache name="sysCache" maxEntriesLocalHeap="1000" eternal="true" overflowToDisk="true" statistics="true"/>
+</ehcache>
