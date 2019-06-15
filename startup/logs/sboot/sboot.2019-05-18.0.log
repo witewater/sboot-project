@@ -1,0 +1,4 @@
+2019-05-18 17:42:12,729 INFO (StartupInfoLogger.java:50)- Starting EntryAppliaction on MyLj-PC with PID 6560 (D:\ideaproject\sboot-project\startup\target\classes started by MyLj in D:\ideaproject\sboot-project\startup)
+2019-05-18 17:42:12,759 INFO (SpringApplication.java:679)- The following profiles are active: dev
+2019-05-18 17:42:34,418 INFO (ValidatorImpl.java:30)- ValidatorImpl已完成初始化
+2019-05-18 17:42:44,639 INFO (StartupInfoLogger.java:59)- Started EntryAppliaction in 32.977 seconds (JVM running for 34.124)

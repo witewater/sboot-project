@@ -1,18 +1,31 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head th:replace="/common/template :: header(~{::title},~{::link},~{::style})">
-    <title>SBOOT登录</title>
-    <style>
-      .captcha {display: none;}
-      .captcha-img{height: 34px;cursor: pointer;}
-      .copyright {text-align: center;}
-      .copyright a {color:#fff;}
-    </style> 
+<head
+	th:replace="/common/template :: header(~{::title},~{::link},~{::style})">
+<title>SBOOT登录</title>
+<style>
+.captcha {
+	display: none;
+}
+
+.captcha-img {
+	height: 34px;
+	cursor: pointer;
+}
+
+.copyright {
+	text-align: center;
+}
+
+.copyright a {
+	color: #fff;
+}
+</style>
 </head>
 <body class="hold-transition login-page">
 	<div class="login-box">
 		<div class="login-logo">
-			<a href="#" style="color:white;"><b>SBOOT</b>demo</a>
+			<a href="#" style="color: white;"><b>SBOOT</b>demo</a>
 		</div>
 		<!-- /.login-logo -->
 		<div class="login-box-body">
@@ -20,24 +33,31 @@
 			<form id="login-form" action="/login" method="post">
 				<div class="form-group has-feedback">
 					<input type="text" class="form-control" name="username"
-						th:placeholder="#{login.username}" maxlength="30" id="username"> <span
-						class="fa fa-user form-control-feedback"></span>
+						th:placeholder="#{login.username}" maxlength="30" id="username">
+					<span class="fa fa-user form-control-feedback"></span>
 				</div>
 				<div class="form-group has-feedback">
 					<input type="password" class="form-control" name="password"
 						th:placeholder="#{login.password}" maxlength="100"> <span
 						class="glyphicon glyphicon-lock form-control-feedback"></span>
 				</div>
-				<div class="form-group has-feedback row" id="isCaptchaShow" th:classappend="${isCaptcha} ? '':'captcha'">
-					<div class="col-xs-7"><input type="text" class="form-control" id="captcha" name="captcha" autocomplete="off" placeholder="验证码"></div>
-					<div class="col-xs-5"><img class="captcha-img" th:src="@{/captcha}"/><input type="hidden" name="isCaptcha" id="isCaptcha" th:value="${isCaptcha}"></div>
-		        </div>
+				<div class="form-group has-feedback row" id="isCaptchaShow"
+					th:classappend="${isCaptcha} ? '':'captcha'">
+					<div class="col-xs-7">
+						<input type="text" class="form-control" id="captcha"
+							name="captcha" autocomplete="off" placeholder="验证码">
+					</div>
+					<div class="col-xs-5">
+						<img class="captcha-img" th:src="@{/captcha}" /><input
+							type="hidden" name="isCaptcha" id="isCaptcha"
+							th:value="${isCaptcha}">
+					</div>
+				</div>
 				<div class="row">
 					<div class="col-xs-8">
 						<div class="checkbox icheck">
-							<label><input name="rememberMe" type="checkbox"
-								value="1" title="记住我 "> [[#{login.remember}]]
-							</label>
+							<label><input name="rememberMe" type="checkbox" value="1"
+								title="记住我 "> [[#{login.remember}]] </label>
 						</div>
 					</div>
 					<!-- /.col -->
@@ -51,13 +71,14 @@
 			<div class="row">
 				<div class="col-xs-12">
 					<div class="dropdown">
-						<a href="javascript:" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
-							<i class="fa fa-globe"></i> 切换语言
+						<a href="javascript:" class="dropdown-toggle"
+							data-toggle="dropdown" data-hover="dropdown"> <i
+							class="fa fa-globe"></i> 切换语言
 						</a>
 						<ul class="dropdown-menu">
 							<li class="mt5"></li>
-								<li><a href="?lang=zh_CN">简体中文</a></li>
-								<li><a href="?lang=en_US">英语</a></li>
+							<li><a href="?lang=zh_CN">简体中文</a></li>
+							<li><a href="?lang=en_US">英语</a></li>
 							<li class="mt10"></li>
 						</ul>
 					</div>
@@ -70,15 +91,17 @@
 		      <a href="#" class="btn btn-block btn-social btn-google btn-flat"><i class="fa fa-google-plus"></i> Sign in using
 		        Google+</a>
 		    </div> -->
-		    <!-- /.social-auth-links -->
-			
+			<!-- /.social-auth-links -->
+
 			<!-- <a href="#">I forgot my password</a><br>
    			<a href="register.html" class="text-center">Register a new membership</a> -->
-			
+
 		</div>
 		<!-- /.login-box-body -->
 		<!--  -->
-    	<p class="copyright"><a href="#">Powered By SBOOT</a></p>
+		<p class="copyright">
+			<a href="#">Powered By SBOOT</a>
+		</p>
 	</div>
 	<!-- /.login-box -->
 	<script th:replace="/common/template :: script"></script>

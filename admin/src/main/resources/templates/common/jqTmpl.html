@@ -2,21 +2,21 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <!-- 一定要加上一个 type="text/x-jquery-tmpl" -->
 <th:block th:fragment="sb-radio">
-<script id="sb-radio-template" type="text/x-jquery-tmpl">
+	<script id="sb-radio-template" type="text/x-jquery-tmpl">
 <label class="radio-inline"> 
 	<input type="radio" way-data="${inputName}"  ${required} ${disabled} name="${inputName}" value="${code}">${name}
 </label>
 </script>
 </th:block>
 <th:block th:fragment="sb-checkbox">
-<script id="sb-checkbox-template" type="text/x-jquery-tmpl">
+	<script id="sb-checkbox-template" type="text/x-jquery-tmpl">
 <label class="checkbox-inline">
 	<input type="checkbox" way-data="${inputName}" ${required} ${disabled}  name="${inputName}" value="${code}">${name}
 </label>  
 </script>
 </th:block>
 <th:block th:fragment="sb-select">
-<script id="sb-select-template" type="text/x-jquery-tmpl">
+	<script id="sb-select-template" type="text/x-jquery-tmpl">
 <option value="${code}" ${disabled}>${name}</option>
 </script>
 </th:block>

@@ -1,43 +1,45 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head th:replace="/common/template :: header(~{::title},~{::link},~{::style})">
+<head
+	th:replace="/common/template :: header(~{::title},~{::link},~{::style})">
 </head>
 <body>
-    <div class="timo-detail-page">
-        <div class="timo-detail-title">»ù±¾ÐÅÏ¢</div>
-        <table class="layui-table timo-detail-table">
-            <tbody>
-            <tr>
-                <th width='100px'>ÈÕÖ¾±àºÅ</th>
-                <td th:text="${actionLog.id}"></td>
-                <th width='100px'>ÈÕÖ¾Ãû³Æ</th>
-                <td th:text="${actionLog.name}"></td>
-            </tr>
-            <tr>
-                <th>ÈÕÖ¾ÀàÐÍ</th>
-                <td th:text="${#dicts.keyValue('LOG_TYPE', actionLog.type)}"></td>
-                <th>ÇÐÈëµã</th>
-                <td th:text="${actionLog.clazz}+'.'+${actionLog.method}+'()'"></td>
-            </tr>
-            <tr>
-                <th>²úÉúÈÕÖ¾µÄ±í</th>
-                <td th:text="${actionLog.model}"></td>
-                <th>²úÉúÈÕÖ¾Êý¾Ýid</th>
-                <td th:text="${actionLog.recordId}"></td>
-            </tr>
-            <tr>
-                <th>²Ù×÷ÈË</th>
-                <td th:text="${actionLog.createBy?.nickname}"></td>
-                <th>¼ÇÂ¼Ê±¼ä</th>
-                <td th:text="${#dates.format(actionLog.createDate, 'yyyy-MM-dd HH:mm:ss')}"></td>
-            </tr>
-            <tr>
-                <th>ÈÕÖ¾ÏûÏ¢</th>
-                <td colspan="4"><pre>[[${actionLog.message}]]</pre></td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-<script th:replace="/common/template :: script"></script>
+	<div class="timo-detail-page">
+		<div class="timo-detail-title">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢</div>
+		<table class="layui-table timo-detail-table">
+			<tbody>
+				<tr>
+					<th width='100px'>ï¿½ï¿½Ö¾ï¿½ï¿½ï¿½</th>
+					<td th:text="${actionLog.id}"></td>
+					<th width='100px'>ï¿½ï¿½Ö¾ï¿½ï¿½ï¿½ï¿½</th>
+					<td th:text="${actionLog.name}"></td>
+				</tr>
+				<tr>
+					<th>ï¿½ï¿½Ö¾ï¿½ï¿½ï¿½ï¿½</th>
+					<td th:text="${#dicts.keyValue('LOG_TYPE', actionLog.type)}"></td>
+					<th>ï¿½ï¿½ï¿½ï¿½ï¿½</th>
+					<td th:text="${actionLog.clazz}+'.'+${actionLog.method}+'()'"></td>
+				</tr>
+				<tr>
+					<th>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¾ï¿½Ä±ï¿½</th>
+					<td th:text="${actionLog.model}"></td>
+					<th>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¾ï¿½ï¿½ï¿½ï¿½id</th>
+					<td th:text="${actionLog.recordId}"></td>
+				</tr>
+				<tr>
+					<th>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</th>
+					<td th:text="${actionLog.createBy?.nickname}"></td>
+					<th>ï¿½ï¿½Â¼Ê±ï¿½ï¿½</th>
+					<td
+						th:text="${#dates.format(actionLog.createDate, 'yyyy-MM-dd HH:mm:ss')}"></td>
+				</tr>
+				<tr>
+					<th>ï¿½ï¿½Ö¾ï¿½ï¿½Ï¢</th>
+					<td colspan="4"><pre>[[${actionLog.message}]]</pre></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<script th:replace="/common/template :: script"></script>
 </body>
 </html>

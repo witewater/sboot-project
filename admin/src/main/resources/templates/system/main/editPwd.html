@@ -1,34 +1,42 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head th:replace="/common/template :: header(~{::title},~{::link},~{::style})">
+<head
+	th:replace="/common/template :: header(~{::title},~{::link},~{::style})">
 </head>
 <body>
-<div class="layui-form timo-compile">
-    <form th:action="@{/edit_pwd}">
-        <div class="layui-form-item">
-            <label class="layui-form-label">Ô­À´ÃÜÂë</label>
-            <div class="layui-input-inline">
-                <input class="layui-input" type="password" name="original" placeholder="ÇëÊäÈëÔ­À´ÃÜÂë">
-            </div>
-        </div>
-        <div class="layui-form-item">
-            <label class="layui-form-label">ÐÂÃÜÂë</label>
-            <div class="layui-input-inline">
-                <input class="layui-input" type="password" name="password" placeholder="ÇëÊäÈëÐÂÃÜÂë">
-            </div>
-        </div>
-        <div class="layui-form-item">
-            <label class="layui-form-label">È·ÈÏÃÜÂë</label>
-            <div class="layui-input-inline">
-                <input class="layui-input" type="password" name="confirm" placeholder="ÔÙÒ»´ÎÊäÈëÃÜÂë">
-            </div>
-        </div>
-        <div class="layui-form-item timo-finally">
-            <button class="layui-btn ajax-submit"><i class="fa fa-check-circle"></i> ±£´æ</button>
-            <button class="layui-btn btn-secondary close-popup"><i class="fa fa-times-circle"></i> ¹Ø±Õ</button>
-        </div>
-    </form>
-</div>
-<script th:replace="/common/template :: script"></script>
+	<div class="layui-form timo-compile">
+		<form th:action="@{/edit_pwd}">
+			<div class="layui-form-item">
+				<label class="layui-form-label">Ô­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</label>
+				<div class="layui-input-inline">
+					<input class="layui-input" type="password" name="original"
+						placeholder="ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½">
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</label>
+				<div class="layui-input-inline">
+					<input class="layui-input" type="password" name="password"
+						placeholder="ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½">
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label">È·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</label>
+				<div class="layui-input-inline">
+					<input class="layui-input" type="password" name="confirm"
+						placeholder="ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½">
+				</div>
+			</div>
+			<div class="layui-form-item timo-finally">
+				<button class="layui-btn ajax-submit">
+					<i class="fa fa-check-circle"></i> ï¿½ï¿½ï¿½ï¿½
+				</button>
+				<button class="layui-btn btn-secondary close-popup">
+					<i class="fa fa-times-circle"></i> ï¿½Ø±ï¿½
+				</button>
+			</div>
+		</form>
+	</div>
+	<script th:replace="/common/template :: script"></script>
 </body>
 </html>

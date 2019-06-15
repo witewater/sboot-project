@@ -6,5 +6,11 @@
   * @author wenzhixin <wenzhixin2010@gmail.com> (http://wenzhixin.net.cn/)
   * @license MIT
   */
-
-.jumpto input{height:31px;width:50px;margin-left:5px;margin-right:5px;text-align:center;display:inline-block}
+.jumpto input {
+	height: 31px;
+	width: 50px;
+	margin-left: 5px;
+	margin-right: 5px;
+	text-align: center;
+	display: inline-block
+}
