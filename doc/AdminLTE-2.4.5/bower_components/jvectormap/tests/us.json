@@ -8,13 +8,10 @@
 	"longitude0": -100,
 	"where": "iso_a2 = 'US'",
 	"minimal_area": 4000000,
-	"insets": [{
-		"codes": ["US-AK"],
-		"width": 220,
-		"left": 0,
-		"top": 440
-	},{
-		"codes": ["US-HI"],
+	"insets": {
+		"codes": [
+			"US-HI"
+		],
 		"width": 80,
 		"left": 245,
 		"top": 460

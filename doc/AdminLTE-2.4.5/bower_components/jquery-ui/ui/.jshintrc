@@ -12,11 +12,9 @@
 	"trailing": true,
 	"undef": true,
 	"unused": true,
-
 	"browser": true,
 	"es3": true,
 	"jquery": true,
-
 	"globals": {
 		"define": false,
 		"Globalize": false

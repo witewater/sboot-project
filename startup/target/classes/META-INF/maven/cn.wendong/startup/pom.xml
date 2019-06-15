@@ -71,23 +71,10 @@
 			</resource>
 		</resources>
 
-		<!-- <plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
-					<mainClass>cn.wendong.EntryAppliaction</mainClass>springboot启动类目录
-				</configuration>
-				<executions>
-					<execution>
-						<goals>
-							创建一个自动可执行的jar或war文件
-							<goal>repackage</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins> -->
+		<!-- <plugins> <plugin> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-maven-plugin</artifactId> 
+			<configuration> <mainClass>cn.wendong.EntryAppliaction</mainClass>springboot启动类目录 
+			</configuration> <executions> <execution> <goals> 创建一个自动可执行的jar或war文件 <goal>repackage</goal> 
+			</goals> </execution> </executions> </plugin> </plugins> -->
 
 	</build>
 </project>
